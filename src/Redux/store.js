@@ -1,8 +1,21 @@
-import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./Slice/counterSlice";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
+import testingData from "./Slice/testingData";
 
-export default configureStore({
-    reducer: {
-        counter: counterReducer
-    }
-})
+const rootReducer = combineReducers({
+  test: testingData,
+});
+
+const persistConfig = {
+  key: "root",
+  storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+export const store = configureStore({
+  reducer: persistedReducer,
+});
+
+export const persistor = persistStore(store);

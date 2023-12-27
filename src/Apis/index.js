@@ -12,8 +12,8 @@ export const signUp = async (data) => {
 }
 
 export const getProfile = async () => {
-    let url = API_INITIAL + '/profile'
-    return await _get(url)
+    // let url = API_INITIAL + '/profile'
+    // return await _get(url)
 }
 
 
