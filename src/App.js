@@ -31,7 +31,7 @@ function App() {
               name={type}
               element={
                 <AuthGuard>
-                  <MainLayout />
+                  <MainLayout/>
                 </AuthGuard>
               }
             />  
@@ -40,7 +40,7 @@ function App() {
             path={`/*`}
             name="Default"
             element={
-                <MainLayout />
+                <MainLayout/>
             }
           />
         </Routes>

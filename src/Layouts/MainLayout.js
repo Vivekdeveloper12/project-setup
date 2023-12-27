@@ -18,7 +18,6 @@ function MainLayout() {
         <MainContent /> ||
         <DefaultContent />
         }
-
       </div>
     </div>
   );

@@ -120,7 +120,7 @@ export const AuthProvider = ({ children }) => {
                             type: 'INIT',
                             payload: {
                                 isAuthenticated: true,
-                                user: response.data.data,
+                                // user: response.data.data,
                             },
                     })
                     })

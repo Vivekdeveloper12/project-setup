@@ -3,9 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import Loader from "../Loader";
 import commonRoutes from "../../Routes/commonRoutes";
 
-function MainContent() {
+function DefaultContent() {
     let routes = [...commonRoutes]
-    
     return (
         <div className="main-content">
             <Suspense fallback={<Loader />}>
@@ -29,4 +28,4 @@ function MainContent() {
     )
 }
 
-export default MainContent
+export default DefaultContent

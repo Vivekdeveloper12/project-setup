@@ -9,7 +9,7 @@ function MainContent() {
     var myRoutes = {
         adminRoutes : adminRoutes,
     }
-    let routes = [...myRoutes[`${type}Routes`] ]
+    let routes = adminRoutes
     
     return (
         <div className="main-content">
